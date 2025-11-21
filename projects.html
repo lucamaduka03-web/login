@@ -1,0 +1,134 @@
+<!-- ...existing code... -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects — Tochukwu (ChukS)</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Gloria+Hallelujah&family=Hammersmith+One&family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-content">
+          <a href="index.html" class="logo">ChukS</a>
+          <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="contact.html" class="cta-button">Get in Touch</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="featured-projects-section" style="padding: 60px 20px">
+          <div style="max-width: 1200px; margin: 0 auto">
+            <h1 class="section-title">Selected Projects</h1>
+            <p class="section-subtitle">
+              A curated list of recent work — case studies, demos and live
+              products.
+            </p>
+
+            <div class="project-cards-grid" aria-live="polite">
+              <!-- Project card 1 -->
+              <article class="project-card" aria-labelledby="p1-title">
+                <a
+                  href="budget/index.html"
+                  aria-label="Open Project E-Commerce Platform case study"
+                >
+                  <img
+                    src="project-one-thumb.jpg"
+                    alt="Budget Planner platform preview"
+                  />
+                </a>
+                <h3 id="p1-title">Budget Planner Site</h3>
+                <p>
+                  A performant, accessible budget planner built with just HTML,
+                  CSS and JavaScript.
+                </p>
+                <div style="display: flex; gap: 10px; margin-top: 12px">
+                  <a href="projects_budget.html" class="btn-secondary"
+                    >Case Study</a
+                  >
+                  <a
+                    href="budget/index.html"
+                    class="btn-secondary"
+                    aria-label="View live demo of E-Commerce Platform"
+                    >Live Demo</a
+                  >
+                </div>
+              </article>
+
+              <!-- Project card 2 -->
+              <article class="project-card" aria-labelledby="p2-title">
+                <a href="color_palette/index.html">
+                  <img
+                    src="project-two-thumb.jpg"
+                    alt="Color Palette preview"
+                  />
+                </a>
+                <h3 id="p2-title">Color Palette</h3>
+                <p>
+                  Get easy access to your color code with its lighter and darker
+                  versions.
+                </p>
+                <div style="display: flex; gap: 10px; margin-top: 12px">
+                  <a href="color_palette/index.html" class="btn-secondary"
+                    >Case Study</a
+                  >
+                  <a href="#" class="btn-secondary">Live Demo</a>
+                </div>
+              </article>
+
+              <!-- Project card 3 -->
+              <article class="project-card" aria-labelledby="p3-title">
+                <a href="password_generator/index.html">
+                  <img src="project-three-thumb.jpg" alt="Password generator" />
+                </a>
+                <h3 id="p3-title">Password Generator</h3>
+                <p>Create secure password with ease and less stress.</p>
+                <div style="display: flex; gap: 10px; margin-top: 12px">
+                  <a href="password_generator/index.html" class="btn-secondary"
+                    >Case Study</a
+                  >
+                  <a href="#" class="btn-secondary">Live Demo</a>
+                </div>
+              </article>
+
+              <!-- Add more project cards as needed -->
+            </div>
+
+            <!-- Optional filters / tags row -->
+            <div
+              style="
+                margin-top: 28px;
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+              "
+            >
+              <button class="btn-secondary" disabled>All</button>
+              <button class="btn-secondary">React</button>
+              <button class="btn-secondary">Design</button>
+              <button class="btn-secondary">Accessibility</button>
+              <button class="btn-secondary">Performance</button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer style="text-align: center; padding: 28px 0">
+        <p>&copy; 2025 Tochukwu. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
