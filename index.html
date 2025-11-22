@@ -1,38 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Gloria+Hallelujah&family=Hammersmith+One&family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-content">
+          <a href="#" class="logo">ChukS</a>
+          <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html" class="cta-button">Get in Touch</a>
+          </nav>
+        </div>
+      </header>
 
-    <title>MyLogIn</title>
-    <link rel="stylesheet" href="style.css">
-     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-   
-<body>
-    
-    <div class="wrapper">
-        <form action="">
-            <h1>Login-here</h1>
-            <div class="input-box">
-                <input type="text" placeholder="Username" required>
-                <i class="bx bxs-user"></i>
-            </div>
-            <div class="input-box">
-                <input type="password" placeholder="Password" minlength="8" required>
-                <i class="bx bxs-lock-alt"></i>
-            </div>
-            <div class="remember-forgot">
-                <label for=""> <input type="checkbox">Remember Me</label>
-                <a href="#">Forgot password?</a>
+      <main>
+        <section class="hero-section">
+          <img
+            src="portfolio.jpg"
+            alt="Stylized developer mascot illustration"
+            class="hero-image-splash"
+          />
+
+          <div class="hero-content">
+            <h2 class="hero-headline">
+              Building Beautifully<br />
+              Functional Web Experiences.
+            </h2>
+            <h3>Hi, I'm Tochukwu E. Mgbe also known as <span>ChukS.</span></h3>
+            <h1 class="tagline">A FRONT-END ARCHITECT & DESIGNER</h1>
+            <a href="projects.html" class="cta-button primary-cta"
+              >VIEW ALL PROJECTS</a
+            >
+          </div>
+        </section>
+
+        <section class="featured-projects-section">
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">
+            A selection of my best work demonstrating a variety of skills.
+          </p>
+
+          <div class="project-cards-grid">
+            <div class="project-card">
+              <img src="budget.png" alt="Thumbnail for Project One" />
+              <h3>Project: Budget Planner</h3>
+              <p>
+                A performant, accessible budget planner built with just HTML,
+                CSS and JavaScript.
+              </p>
+              <a href="budget/index.html" class="btn-secondary">Local Demo</a>
             </div>
 
-            <button type="submit" class="btn">Login</button>
-
-            <div class="register-link">
-                <p>Don't have an account? <a href="#">Register</a> </p>
+            <div class="project-card">
+              <img src="color_palette.jpg" alt="Thumbnail for Project Two" />
+              <h3>Project: Color Palette</h3>
+              <p>
+                Get easy access to your color code with its lighter and darker
+                versions.
+              </p>
+              <a href="color_palette/index.html" class="btn-secondary"
+                >Local Demo</a
+              >
             </div>
-        </form>
+
+            <div class="project-card">
+              <img src="password.jpg" alt="Thumbnail for Project Three" />
+              <h3>Project: Password Generator</h3>
+              <p>Create secure password with ease and less stress.</p>
+              <a href="password_generator/index.html" class="btn-secondary"
+                >Local Demo</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <section class="skills-section">
+          <h2 class="section-title">Technical Skills</h2>
+
+          <div class="skill-icons-grid">
+            <img src="react-brands-solid-full.svg" alt="React Logo" />
+            <img src="js-brands-solid-full.svg" alt="JavaScript Logo" />
+            <img src="node-brands-solid-full.svg" alt="Node.js Logo" />
+            <img src="git-alt-brands-solid-full.svg" alt="Git Logo" />
+            <img src="figma-brands-solid-full.svg" alt="Figma Logo" />
+            <img src="html5-brands-solid-full.svg" alt="HTML5 Logo" />
+            <img src="css-brands-solid-full.svg" alt="CSS3 Logo" />
+          </div>
+        </section>
+      </main>
+      <footer>
+        <p>&copy; 2025 Tochukwu. All rights reserved.</p>
+      </footer>
     </div>
-</body>
+
+    <script src="script.js"></script>
+  </body>
 </html>

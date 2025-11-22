@@ -1,0 +1,100 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Tochukwu (ChukS)</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Gloria+Hallelujah&family=Hammersmith+One&family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-content">
+        <a href="index.html" class="logo">ChukS</a>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Me</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html" class="active cta-button">Get in Touch</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section" style="padding:48px 20px; min-height:220px;">
+        <div class="hero-content">
+          <h1 class="hero-headline" style="font-size:2rem; margin-bottom:8px;">Get in touch</h1>
+          <p class="section-subtitle">Questions, collaboration or freelance inquiries — I’d love to hear from you.</p>
+        </div>
+      </section>
+
+      <section style="max-width:1100px; margin:28px auto; padding:0 18px;">
+        <div class="about-contact-section" style="padding:24px;">
+          <div class="contact-info" style="max-width:680px;">
+            <h2 class="section-title">Send a message</h2>
+
+            <!-- Replace action with your form endpoint (Formspree, Netlify Forms, server). -->
+            <form id="contact-form" method="post" action="#" style="margin-top:12px;">
+              <label for="name" style="display:block; margin-top:12px;">Name</label>
+              <input id="name" name="name" type="text" required style="width:100%; padding:10px; border-radius:8px; border:1px solid #e6e6e6; margin-top:6px;" />
+
+              <label for="email" style="display:block; margin-top:12px;">Email</label>
+              <input id="email" name="email" type="email" required style="width:100%; padding:10px; border-radius:8px; border:1px solid #e6e6e6; margin-top:6px;" />
+
+              <label for="subject" style="display:block; margin-top:12px;">Subject</label>
+              <input id="subject" name="subject" type="text" style="width:100%; padding:10px; border-radius:8px; border:1px solid #e6e6e6; margin-top:6px;" />
+
+              <label for="message" style="display:block; margin-top:12px;">Message</label>
+              <textarea id="message" name="message" rows="6" required style="width:100%; padding:10px; border-radius:8px; border:1px solid #e6e6e6; margin-top:6px;"></textarea>
+
+              <div style="margin-top:12px; display:flex; gap:12px; align-items:center;">
+                <button type="submit" class="primary-cta" style="padding:10px 16px; border-radius:8px;">Send Message</button>
+                <button type="reset" class="btn-secondary" style="padding:10px 14px; border-radius:8px;">Reset</button>
+              </div>
+
+              <p id="form-note" style="color:#666; margin-top:12px; font-size:0.95rem;">
+                I aim to reply within 48 hours. For quick requests, email: <a href="mailto:hello@yourdomain.com">mgbetochukwu49@gmail.com</a>
+              </p>
+            </form>
+          </div>
+
+          <aside class="skill-icons-grid" aria-label="Contact details" style="flex:0 0 320px; padding:18px;">
+            <div style="background:white; padding:14px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.04);">
+              <h3 style="margin-bottom:8px;">Contact</h3>
+              <p style="margin-bottom:6px;"><strong>Email</strong><br /><a href="mailto:hello@yourdomain.com">mgbetochukwu49@gmail.com</a></p>
+              <p style="margin-bottom:6px;"><strong>Location</strong><br />Kaduna, Nigeria</p>
+              <p style="margin-bottom:6px;"><strong>Availability</strong><br />Open to freelance & contract work</p>
+            </div>
+
+            <div style="margin-top:16px; background:white; padding:18px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.04);">
+              <h3 style="margin-bottom:8px;">Social</h3>
+              <p style="margin:0;">
+                <a href="#" style="display:block; margin-bottom:8px;">Twitter / X</a>
+                <a href="#" style="display:block; margin-bottom:8px;">GitHub</a>
+                <a href="#" style="display:block;">LinkedIn</a>
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer style="text-align:center; padding:28px 0;">
+      <p>&copy; 2025 Tochukwu. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Minimal client-side handler: replace with server endpoint integration.
+    document.getElementById('contact-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      // TODO: replace with fetch to your form endpoint (Formspree / Netlify / API)
+      alert('Form submission placeholder — wire to your backend or 3rd-party form endpoint.');
+    });
+  </script>
+</body>
+</html>

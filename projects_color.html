@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Color Palette — Case Study — Tochukwu (ChukS)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-content">
+        <a href="index.html" class="logo">ChukS</a>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Me</a>
+          <a href="projects.html" class="active">Projects</a>
+          <a href="contact.html" class="cta-button">Get in Touch</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section" style="padding:48px 20px;">
+        <div class="hero-content">
+          <h1 class="hero-headline">Color Palette</h1>
+          <p class="section-subtitle">Fast access to base colors with generated lighter & darker variants.</p>
+          <div style="margin-top:12px;">
+            <a href="#" class="primary-cta">Open Live Demo</a>
+            <a href="color_palette/index.html" class="btn-secondary" style="margin-left:10px;">Local Demo</a>
+          </div>
+        </div>
+      </section>
+
+      <section style="max-width:1100px; margin:28px auto; padding:0 18px;">
+        <h2 class="section-title">Overview</h2>
+        <p>The Color Palette tool generates accessible color scales from a base color and provides copyable CSS variables for quick use in designs and code.</p>
+
+        <h3>Problem</h3>
+        <p>Designers and developers waste time making consistent light/dark variants and ensuring contrast for accessibility.</p>
+
+        <h3>Goals</h3>
+        <ul>
+          <li>Generate predictable lighter/darker shades</li>
+          <li>Provide easy copy of hex / rgba / CSS variable formats</li>
+          <li>Ensure adequate contrast and show WCAG hints</li>
+        </ul>
+
+        <h3>Role</h3>
+        <p>Solo frontend developer — UX, implementation and deploy of the static demo.</p>
+
+        <h3>Solution</h3>
+        <p>A single-page app that accepts a base color, previews generated shades, shows contrast ratios, and exposes ready-to-paste variables. The UI is keyboard-first and mobile-friendly.</p>
+
+        <h3>Key features</h3>
+        <ul>
+          <li>Auto-generated tints/shades with preview swatches</li>
+          <li>Contrast indicator with suggestions</li>
+          <li>Copy as CSS variables, hex, or rgba</li>
+        </ul>
+
+        <h3>Tech & Implementation</h3>
+        <p>Vanilla JS + small utility for color transformations (HSL shifts). No build step required; static deployment on GitHub Pages / Netlify.</p>
+
+        <pre style="background:#f6f6f6;padding:10px;border-radius:6px;overflow:auto;"><code>// generate shade (simplified)
+function shade(h, s, l, delta){ 
+  return `hsl(${h}, ${s}%, ${Math.max(0, Math.min(100, l + delta))}%)`;
+}</code></pre>
+
+        <h3>Accessibility & Performance</h3>
+        <ul>
+          <li>Contrast warnings and WCAG pass/fail markers</li>
+          <li>Small assets, no external libraries, fast initial load</li>
+        </ul>
+
+        <h3>Results & Next steps</h3>
+        <p>Useful tool for quick palettes; will add export presets and named-brand palettes next.</p>
+
+        <h3>Links</h3>
+        <ul>
+          <li><a href="#">Live demo</a></li>
+          <li><a href="color_palette/index.html">Local demo (use for testing)</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer style="text-align:center; padding:28px 0;">
+      <p>&copy; 2025 Tochukwu. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

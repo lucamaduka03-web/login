@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dictionary — Case Study — Tochukwu (ChukS)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-content">
+        <a href="index.html" class="logo">ChukS</a>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Me</a>
+          <a href="projects.html" class="active">Projects</a>
+          <a href="contact.html" class="cta-button">Get in Touch</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section" style="padding:48px 20px;">
+        <div class="hero-content">
+          <h1 class="hero-headline">Dictionary</h1>
+          <p class="section-subtitle">Lookup words, definitions and example usage with a clean, fast UI.</p>
+          <div style="margin-top:12px;">
+            <a href="#" class="primary-cta">Open Live Demo</a>
+            <a href="dictionary/index.html" class="btn-secondary" style="margin-left:10px;">Local Demo</a>
+          </div>
+        </div>
+      </section>
+
+      <section style="max-width:1100px; margin:28px auto; padding:0 18px;">
+        <h2 class="section-title">Overview</h2>
+        <p>Simple dictionary app focused on fast lookups, clear definition layouts, and keyboard-first navigation.</p>
+
+        <h3>Problem</h3>
+        <p>Many dictionary demos are cluttered or slow; users need quick access to concise definitions and examples.</p>
+
+        <h3>Goals</h3>
+        <ul>
+          <li>Fast response for lookups</li>
+          <li>Readable, scannable definition layout</li>
+          <li>Mobile-friendly and keyboard accessible</li>
+        </ul>
+
+        <h3>Role</h3>
+        <p>Solo frontend work: UI design, API wiring (client-side), caching and deploy.</p>
+
+        <h3>Solution</h3>
+        <p>Client-side fetch to a public dictionary API with simple caching and clear error states; includes pronunciation and example sentences when available.</p>
+
+        <h3>Implementation highlight</h3>
+        <pre style="background:#f6f6f6;padding:10px;border-radius:6px;overflow:auto;"><code>// simple cache (localStorage)
+async function lookup(term){
+  const key = `dict:${term}`;
+  const cached = localStorage.getItem(key);
+  if(cached) return JSON.parse(cached);
+  const res = await fetch(`/api/dictionary?q=${encodeURIComponent(term)}`);
+  const json = await res.json();
+  localStorage.setItem(key, JSON.stringify(json));
+  return json;
+}</code></pre>
+
+        <h3>Accessibility & Performance</h3>
+        <ul>
+          <li>ARIA roles for live results and alerts</li>
+          <li>Minimal DOM updates and response caching</li>
+        </ul>
+
+        <h3>Results & Next steps</h3>
+        <p>Good baseline for quick lookups; next: offline-first mode and better pronunciation audio support.</p>
+
+        <h3>Links</h3>
+        <ul>
+          <li><a href="#">Live demo</a></li>
+          <li><a href="dictionary/index.html">Local demo</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer style="text-align:center; padding:28px 0;">
+      <p>&copy; 2025 Tochukwu. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
